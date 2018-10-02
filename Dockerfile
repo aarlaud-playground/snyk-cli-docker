@@ -6,8 +6,7 @@ MAINTAINER Snyk Ltd
 RUN npm install --global snyk snyk-to-html && \
     apt-get update && \
     apt-get upgrade && \
-    apt-get install -y jq && \
-    apt-get install docker
+    apt-get install -y jq
 
 RUN chmod -R a+wrx /home/node
 WORKDIR /home/node
