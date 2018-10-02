@@ -3,12 +3,12 @@
 set -v
 set -x
 
-OUTPUT_FILE=snyk-result.json
-ERROR_FILE=snyk-error.log
-HTML_FILE=snyk_report.html
-SNYK_COMMAND="$1"
-SNYK_PARAMS="${@:2}"
-ADDITIONAL_ENV=""
+# OUTPUT_FILE=snyk-result.json
+# ERROR_FILE=snyk-error.log
+# HTML_FILE=snyk_report.html
+# SNYK_COMMAND="$1"
+# SNYK_PARAMS="${@:2}"
+# ADDITIONAL_ENV=""
 
 if [ -z "$USER_ID" ]; then
   USER_ID=$(id -u)
@@ -20,7 +20,7 @@ if [ "$USER_NAME" != "" ] && [ "$USER_NAME" != "root" ]; then
   usermod -d /home/node "$USER_NAME"
 fi
 
-useradd -o -m -u "$USER_ID" -d /home/node docker-user 2>/dev/null
+useradd -o -m -u "$USER_ID" -d /home/node docker-user #2>/dev/null
 
 runCmdAsDockerUser () {
   su docker-user -m -c "$1"
