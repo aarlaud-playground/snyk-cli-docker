@@ -7,7 +7,7 @@ RUN npm install --global snyk snyk-to-html && \
     apt-get update && \
     apt-get upgrade && \
     apt-get install -y jq && \
-    apt-get docker
+    apt-get install docker
 
 RUN chmod -R a+wrx /home/node
 WORKDIR /home/node
