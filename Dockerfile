@@ -14,6 +14,10 @@ ENV HOME /home/node
 
 ENV HOME /usr/bin/docker
 
+ADD docker-entrypoint.sh .
+
+ENTRYPOINT ["./docker-entrypoint.sh"]
+
 # Default command is `snyk test`
 # Override with `docker run ... snyk/snyk-cli <command> <args>`
-CMD ["docker pull node:10-alpine","snyk test --docker node:10-alpine --org=aarlaud-snyk-demo"]
+CMD ["test"]
