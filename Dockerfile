@@ -6,8 +6,7 @@ MAINTAINER Snyk Ltd
 RUN npm install --global snyk snyk-to-html && \
     apk update && \
     apk upgrade && \
-    apk add --no-cache \
-    docker \
+    apk add --no-cache docker
 
 RUN chmod -R a+wrx /home/node
 WORKDIR /home/node
