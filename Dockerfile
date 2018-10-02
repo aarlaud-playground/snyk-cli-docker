@@ -16,4 +16,4 @@ ENV HOME /usr/bin/docker
 
 # Default command is `snyk test`
 # Override with `docker run ... snyk/snyk-cli <command> <args>`
-CMD [""]
+CMD ["docker pull node:10-alpine","snyk test --docker node:10-alpine --org=aarlaud-snyk-demo"]
