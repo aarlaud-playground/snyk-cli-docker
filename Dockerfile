@@ -16,7 +16,7 @@ ENV HOME /usr/bin/docker
 
 ADD docker-entrypoint.sh .
 
-ENTRYPOINT ["./docker-entrypoint.sh"]
+# ENTRYPOINT ["./docker-entrypoint.sh"]
 
 # Default command is `snyk test`
 # Override with `docker run ... snyk/snyk-cli <command> <args>`
