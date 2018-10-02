@@ -1,12 +1,13 @@
-FROM node:8-slim
+FROM node:10-alpine
 
 MAINTAINER Snyk Ltd
 
 # Install snyk cli
 RUN npm install --global snyk snyk-to-html && \
-    apt-get update && \
-    apt-get upgrade && \
-    apt-get install -y jq
+    apk update && \
+    apk upgrade && \
+    apk add --no-cache \
+    docker \
 
 RUN chmod -R a+wrx /home/node
 WORKDIR /home/node
