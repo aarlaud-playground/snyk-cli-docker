@@ -20,4 +20,4 @@ ENTRYPOINT ["./docker-entrypoint.sh"]
 
 # Default command is `snyk test`
 # Override with `docker run ... snyk/snyk-cli <command> <args>`
-CMD ["test"]
+CMD [""]
