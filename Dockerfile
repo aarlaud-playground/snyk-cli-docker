@@ -12,7 +12,7 @@ RUN chmod -R a+wrx /home/node
 WORKDIR /home/node
 ENV HOME /home/node
 
-ENV PATH /usr/bin/docker
+ENV HOME /usr/bin/docker
 
 # Default command is `snyk test`
 # Override with `docker run ... snyk/snyk-cli <command> <args>`
