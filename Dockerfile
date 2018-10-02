@@ -15,6 +15,7 @@ ENV HOME /home/node
 ENV HOME /usr/bin/docker
 
 ADD docker-entrypoint.sh .
+RUN chmod -R a+wrx ./docker-entrypoint.sh
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
 
